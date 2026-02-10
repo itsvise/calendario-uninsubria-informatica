@@ -102,9 +102,9 @@ Se hai finito il semestre o non vuoi più usare il servizio, ecco come pulire tu
 
 1. Ferma l'automazione:
 
-- Apri il terminale: env EDITOR=nano crontab -e
-- Cancella la riga relativa a aggiorna.sh.
-- Salva (CTRL+O) ed esci (CTRL+X).
+- Apri il terminale: `env EDITOR=nano crontab -e`
+- Cancella la riga relativa a `aggiorna.sh`.
+- Salva (`CTRL+O`) ed esci (`CTRL+X`).
 
 2. Rimuovi i file: Cancella la cartella del progetto dal tuo computer.
 
