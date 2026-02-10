@@ -4,14 +4,15 @@ on:
   schedule:
     # Esegue ogni 6 ore (alle 00, 06, 12, 18 UTC)
     - cron: '0 */6 * * *'
-  workflow_dispatch: # Permette di eseguirlo a mano se serve
+  workflow_dispatch: # Ti permette di avviarlo a mano dal sito GitHub se serve subito
 
 permissions:
-  contents: write
+  contents: write # Dà il permesso al "robot" di salvare il file nel tuo repo
 
 jobs:
-  build:
+  update-calendar:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout del codice
         uses: actions/checkout@v4
@@ -21,10 +22,13 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: Installa dipendenze
-        run: pip install -r requirements.txt
+      - name: Installa librerie
+        run: pip install ics requests
 
       - name: Esegui lo script
+        env:
+          # Qui passa il segreto (che hai salvato nelle impostazioni) allo script Python
+          CALENDAR_URL: ${{ secrets.CALENDAR_URL }}
         run: python filter_calendar.py
 
       - name: Salva le modifiche (Commit & Push)
@@ -32,6 +36,6 @@ jobs:
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           git add calendario_pulito.ics
-          # Committa solo se ci sono cambiamenti
-          git commit -m "Aggiornamento automatico calendario" || exit 0
+          # Se il file non è cambiato, non fare nulla (evita errori)
+          git commit -m "Aggiornamento automatico orario" || echo "Nessun cambiamento rilevato"
           git push
