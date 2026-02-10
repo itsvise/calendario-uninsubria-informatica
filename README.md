@@ -33,6 +33,28 @@ URL Calendario:
 
 - Google Calendar: Icona "+" > Da URL.
 
+## Cambio Semestre: Come aggiornare
+
+Quando inizia un nuovo semestre o anno accademico, devi aggiornare due cose:
+
+1. **Il Link (Locale)**:
+
+- Genera il nuovo link iCal dal sito dell'università.
+
+- Apri il file `aggiorna.sh` sul tuo Mac.
+
+- Sostituisci il link nella riga `export CALENDAR_URL="..."`.
+
+2. **Le Materie (Repository)**:
+
+- Apri `filter_calendar.py`.
+
+- Aggiorna la lista `MATERIE_DA_RIMUOVERE` con i nuovi corsi che non vuoi seguire.
+
+- Fai `git commit` e `git push` delle modifiche.
+
+*Non serve toccare altro (cron, telefono, ecc.), si aggiornerà tutto da solo.*
+
 ## Tutorial: Crea il TUO calendario personalizzato
 
 Sei uno studente e vuoi usare questo sistema per il tuo piano di studi specifico? Segui questa guida.
@@ -80,19 +102,19 @@ Nella cartella trovi un file `aggiorna_template.sh`.
 1. Vai sul portale University Planner dell'Insubria (es. informatica: https://www.uninsubria.it/formazione/offerta-formativa/corsi-di-laurea/informatica   ).
 
 2. Vai alla sezione “Frequentare” -> “Orario delle lezioni”.
-(![alt text](assets/frequentare.png))
+![alt text](assets/frequentare.png)
 
 3. Troverai dei link, premi sull’anno a Varese:
-(![alt text](assets/triennale.png))
+![alt text](assets/triennale.png)
 
 4. Premi l’icona con la freccia verso il basso in alto a destra
-(![alt text](assets/button.png))
+![alt text](assets/button.png)
 
 5. Premi il tasto “CREA ICAL LINK” per generare il link ical
-(![alt text](assets/generate.png))
+![alt text](assets/generate.png)
 
 6. Premi il tasto “COPIA LINK” per copiare il link ical generato (inizia con https://unins.prod.up.cineca.it/...).
-(![alt text](assets/copy_link.png))
+![alt text](assets/copy_link.png)
 
 </details>
 
