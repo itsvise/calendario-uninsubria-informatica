@@ -72,22 +72,31 @@ Nella cartella trovi un file `aggiorna_template.sh`.
 1. Rinominalo in `aggiorna.sh`.
 
 2. Aprilo e inserisci il tuo link iCal (preso dal portale studenti Uninsubria) al posto di `INSERISCI_QUI....`.
+
+---
 <details>
 <summary><strong>❓ Come ottengo il mio Link iCal? (Clicca qui)</strong></summary>
 
-Vai sul portale University Planner dell'Insubria.
+1. Vai sul portale University Planner dell'Insubria (es. informatica: https://www.uninsubria.it/formazione/offerta-formativa/corsi-di-laurea/informatica   ).
 
-Seleziona il tuo Corso di Laurea e l'Anno di corso.
+2. Vai alla sezione “Frequentare” -> “Orario delle lezioni”.
+(![alt text](assets/frequentare.png))
 
-Una volta apparso il calendario, guarda in alto a destra.
+3. Troverai dei link, premi sull’anno a Varese:
+(![alt text](assets/triennale.png))
 
-Clicca sul pulsante marrone/arancione "Crea iCal Link" (o icona simile).
+4. Premi l’icona con la freccia verso il basso in alto a destra
+(![alt text](assets/button.png))
 
-Se richiesto, seleziona "Tutto il periodo" o il semestre corrente.
+5. Premi il tasto “CREA ICAL LINK” per generare il link ical
+(![alt text](assets/generate.png))
 
-Copia l'URL lungo che viene generato (inizia con https://unins.prod.up.cineca.it/...).
+6. Premi il tasto “COPIA LINK” per copiare il link ical generato (inizia con https://unins.prod.up.cineca.it/...).
+(![alt text](assets/copy.png))
 
 </details>
+
+---
 
 3. Rendilo eseguibile:
 
