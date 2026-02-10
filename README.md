@@ -2,7 +2,7 @@
 
 Questo repository ospita un sistema automatizzato per filtrare il calendario delle lezioni del corso di laurea in Informatica (Università degli Studi dell'Insubria).
 
-Il sistema risolve il problema del calendario ufficiale "affollato", generando un file .ics pulito che contiene solo i corsi che ti interessano, rimuovendo automaticamente le materie non frequentate o gli esami già sostenuti.
+Il sistema risolve il problema del calendario ufficiale "affollato", generando un file `.ics` pulito che contiene solo i corsi che ti interessano, rimuovendo automaticamente le materie non frequentate o gli esami già sostenuti.
 
 ## Come funziona
 
@@ -12,7 +12,7 @@ A causa delle restrizioni di sicurezza dei server universitari (Firewall/Geobloc
 
 2 **Download & Filtro**: Scarica l'orario ufficiale dall'ateneo e rimuove le materie escluse (configurate in Python).
 
-3 **Deploy**: Carica il file aggiornato (custom_uni_calendar.ics) su questo repository GitHub.
+3 **Deploy**: Carica il file aggiornato (`custom_uni_calendar.ics`) su questo repository GitHub.
 
 4 **Sync**: I dispositivi (iPhone, iPad, Mac, Android) leggono il file direttamente da GitHub, che funge da hosting sempre disponibile.
 
@@ -43,7 +43,7 @@ Fai il Fork di questo repository (tasto in alto a destra su GitHub) per crearne 
 
 2. **Clona sul tuo computer**
 
-Apri il terminale e scarica la tua copia (sostituisci TUO_USERNAME):
+Apri il terminale e scarica la tua copia (sostituisci `TUO_USERNAME`):
 
 ```bash
 git clone [https://github.com/TUO_USERNAME/calendario-uninsubria-informatica.git](https://github.com/TUO_USERNAME/calendario-uninsubria-informatica.git)
@@ -52,8 +52,8 @@ cd calendario-uninsubria-informatica
 
 3. **Scegli le materie da nascondere**
 
-Apri il file filter_calendar.py con un editor di testo.
-Modifica la lista MATERIE_DA_RIMUOVERE inserendo i nomi (o parti dei nomi) dei corsi che NON vuoi vedere.
+Apri il file `filter_calendar.py` con un editor di testo.
+Modifica la lista `MATERIE_DA_RIMUOVERE` inserendo i nomi (o parti dei nomi) dei corsi che NON vuoi vedere.
 
 ```python
 MATERIE_DA_RIMUOVERE = [
@@ -67,11 +67,11 @@ MATERIE_DA_RIMUOVERE = [
 
 4. **Configura lo script di aggiornamento**
 
-Nella cartella trovi un file aggiorna_template.sh.
+Nella cartella trovi un file `aggiorna_template.sh`.
 
-1. Rinominalo in aggiorna.sh.
+1. Rinominalo in `aggiorna.sh`.
 
-2. Aprilo e inserisci il tuo link iCal (preso dal portale studenti Uninsubria) al posto di INSERISCI_QUI....
+2. Aprilo e inserisci il tuo link iCal (preso dal portale studenti Uninsubria) al posto di `INSERISCI_QUI....`.
 
 3. Rendilo eseguibile:
 
@@ -79,7 +79,7 @@ Nella cartella trovi un file aggiorna_template.sh.
 chmod +x aggiorna.sh
 ```
 
-*Nota: Il file aggiorna.sh è ignorato da Git (.gitignore) per proteggere la tua privacy. Il tuo link personale non finirà mai online.*
+*Nota: Il file `aggiorna.sh` è ignorato da Git (`.gitignore`) per proteggere la tua privacy. Il tuo link personale non finirà mai online.*
 
 5. **Installa i requisiti**
 
@@ -89,8 +89,8 @@ pip install -r requirements.txt
 
 6. **Attiva l'automazione (Mac/Linux)**
 
-Per aggiornare il calendario ogni 3 ore, useremo cron.
-Da terminale digita env EDITOR=nano crontab -e e aggiungi questa riga in fondo (modifica il percorso con quello della tua cartella):
+Per aggiornare il calendario ogni 3 ore, useremo **cron**.
+Da terminale digita `env EDITOR=nano crontab -e` e aggiungi questa riga in fondo (modifica il percorso con quello della tua cartella):
 
 ```bash
 0 */3 * * * /Users/TUO_NOME/Documents/GitHub/calendario-uninsubria-informatica/aggiorna.sh >> /tmp/calendar.log 2>&1
@@ -114,11 +114,11 @@ Se hai finito il semestre o non vuoi più usare il servizio, ecco come pulire tu
 
 ## Requisiti Tecnici
 
-- Python 3.9+
+- **Python 3.9+**
 
-- Librerie: ics, requests
+- **Librerie**: `ics`, `requests`
 
-- SSL Fix: urllib3<2.0 (Necessario per evitare errori SSL su macOS con LibreSSL).
+- **SSL Fix**: `urllib3<2.0` (Necessario per evitare errori SSL su macOS con LibreSSL).
 
 ## Licenza
 
