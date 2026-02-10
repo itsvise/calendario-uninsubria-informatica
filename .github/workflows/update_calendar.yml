@@ -23,7 +23,7 @@ jobs:
           python-version: '3.9'
 
       - name: Installa librerie
-        run: pip install ics requests
+        run: pip install -r requirements.txt
 
       - name: Esegui lo script
         env:
@@ -35,7 +35,7 @@ jobs:
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
-          git add calendario_pulito.ics
+          git add custom_uni_calendar.ics
           # Se il file non è cambiato, non fare nulla (evita errori)
           git commit -m "Aggiornamento automatico orario" || echo "Nessun cambiamento rilevato"
           git push
