@@ -33,7 +33,7 @@ URL Calendario:
 
 - Google Calendar: Icona "+" > Da URL.
 
-## Cambio Semestre: Come aggiornare
+## Cambio Semestre: Come aggiornare
 
 Quando inizia un nuovo semestre o anno accademico, devi aggiornare due cose:
 
