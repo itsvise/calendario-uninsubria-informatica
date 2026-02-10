@@ -92,7 +92,7 @@ Nella cartella trovi un file `aggiorna_template.sh`.
 (![alt text](assets/generate.png))
 
 6. Premi il tasto “COPIA LINK” per copiare il link ical generato (inizia con https://unins.prod.up.cineca.it/...).
-(![alt text]())
+(![alt text](assets/copy.png))
 
 </details>
 
